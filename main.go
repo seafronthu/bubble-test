@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/sirupsen/logrus"
-	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 	"github.com/wziww/bubble-test/server"
 )
@@ -27,19 +25,17 @@ func main() {
 			Usage: "Load configuration from `FILE`",
 		},
 	}
-	log.SetFormatter(&log.TextFormatter{
+	logrus.SetFormatter(&logrus.TextFormatter{
 		FullTimestamp:   true,
 		TimestampFormat: "2006-01-02 15:04:05",
 	})
-	log.SetOutput(os.Stdout)
-	log.SetLevel(log.DebugLevel)
+	logrus.SetOutput(os.Stdout)
+	logrus.SetLevel(logrus.DebugLevel)
 	app.Action = func(c *cli.Context) error {
-		fmt.Println(c.String("config"))
-		fmt.Println(c.String("c"))
 		return server.Run(c)
 	}
 	err := app.Run(os.Args)
 	if err != nil {
-		log.Fatal(err)
+		logrus.Fatal(err)
 	}
 }
