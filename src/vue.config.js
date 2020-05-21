@@ -3,13 +3,11 @@ const { join, resolve } = require("path");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const isProduction = process.env.NODE_ENV === "production";
-console.log(1234242);
 // const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // const zopfli = require('@gfx/zopfli')
 // const BrotliPlugin = require('brotli-webpack-plugin')
 // const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i
 const pathResolve = dir => {
-  console.log(join(__dirname, dir));
   return join(__dirname, dir);
 };
 const externals = isProduction
