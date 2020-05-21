@@ -1,0 +1,27 @@
+
+animte-arrow(type)
+  animation type 1s linear alternate infinite
+.number-statistic
+  .number-statistic-title
+    font-size 14px
+  .number-statistic-content
+    font-size 14px
+    color rgba(0,0,0,.85)
+    margin-left 8px
+  .number-statistic-arrow
+    &.number-statistic-arrow-down
+      animte-arrow(arrow-down-shake)
+      color $danger
+    &.number-statistic-arrow-up
+      animte-arrow(arrow-up-shake)
+      color $success
+@keyframes arrow-up-shake 
+  0%
+    transform translateY(0)
+  100%
+    transform translateY(-5px)
+@keyframes arrow-down-shake 
+  0%
+    transform translateY(0)
+  100%
+    transform translateY(5px)

@@ -1,0 +1,289 @@
+$hover-action(t = 0.3s)
+  transition "all %s" % t
+  // 提高权值，防止样式不生效
+body
+// 布局
+  .flex-row-start
+    display-flex row flex-start flex-start
+  .flex-row-start-center
+    display-flex row flex-start center
+  .flex-row-start-end
+    display-flex row flex-start flex-end
+  .flex-row-start-stretch
+    display-flex row flex-start stretch
+  .flex-row-center-start
+    display-flex row center flex-start
+  .flex-row-center
+    display-flex row center center
+  .flex-row-center-end
+    display-flex row center flex-end
+  .flex-row-center-stretch
+    display-flex row center stretch
+  .flex-row-end-start
+    display-flex row flex-end flex-start
+  .flex-row-end-center
+    display-flex row flex-end center
+  .flex-row-end
+    display-flex row flex-end flex-end
+  .flex-row-end-stretch
+    display-flex row flex-end stretch
+  .flex-row-between-start
+    display-flex row space-between flex-start
+  .flex-row-between-center
+    display-flex row space-between center
+  .flex-row-between-end
+    display-flex row space-between flex-end
+  .flex-row-between-stretch
+    display-flex row space-between stretch
+  .flex-row-around-start
+    display-flex row space-around flex-start
+  .flex-row-around-center
+    display-flex row space-around center
+  .flex-row-around-end
+    display-flex row space-around flex-end
+  .flex-row-around-stretch
+    display-flex row space-around stretch
+  .flex-column-start
+    display-flex column flex-start flex-start
+  .flex-column-start-center
+    display-flex column flex-start center
+  .flex-column-start-end
+    display-flex column flex-start flex-end
+  .flex-column-start-stretch
+    display-flex column flex-start stretch
+  .flex-column-center-start
+    display-flex column center flex-start
+  .flex-column-center
+    display-flex column center center
+  .flex-column-center-end
+    display-flex column center flex-end
+  .flex-column-center-stretch
+    display-flex column center stretch
+  .flex-column-end-start
+    display-flex column flex-end flex-start
+  .flex-column-end-center
+    display-flex column flex-end center
+  .flex-column-end
+    display-flex column flex-end flex-end
+  .flex-column-end-stretch
+    display-flex column flex-end stretch
+  .flex-column-between-start
+    display-flex column space-between flex-start
+  .flex-column-between-center
+    display-flex column space-between center
+  .flex-column-between-end
+    display-flex column space-between flex-end
+  .flex-column-between-stretch
+    display-flex column space-between stretch
+  .flex-column-around-start
+    display-flex column space-around flex-start
+  .flex-column-around-center
+    display-flex column space-around center
+  .flex-column-around-end
+    display-flex column space-around flex-end
+  .flex-column-around-stretch
+    display-flex column space-around stretch
+  .flex-nowrap
+    flex-grow nowrap
+  .flex-1
+    flex 1
+  .flex-1-0
+    flex 1 0
+  .flex-0-1
+    flex 0 1
+  .flex-1-auto
+    flex 1 1 auto
+  .flex-1-0-auto
+    flex 1 0 auto
+  .flex-0-1-auto
+    flex 0 1 auto
+  // 容器大小
+  .width-full
+    width 100%
+  .height-full
+    height 100%
+  // 边距
+  .padding-0
+    padding 0
+  .padding-5
+    padding 5px
+  .padding-0-5
+    padding 0 5px
+  .padding-5-0
+    padding 5px 0
+  .padding-10
+    padding 10px
+  .padding-0-10
+    padding 0 10px
+  .padding-10-0
+    padding 10px 0
+  .padding-15
+    padding 15px
+  .padding-0-15
+    padding 0 15px
+  .padding-15-0
+    padding 15px 0
+  .padding-20
+    padding 20px
+  .padding-0-20
+    padding 0 20px
+  .padding-20-0
+    padding 20px 0
+  .padding-left-5
+    padding-left 5px
+  .padding-right-5
+    padding-right 5px
+  .padding-right-10
+    padding-right 10px
+  .padding-left-10
+    padding-left 10px
+  .padding-bottom-10
+    padding-bottom 10px
+  .margin-right-10
+    margin-right 10px
+  .margin-left-10
+    margin-left 10px
+  // 文本设置
+  .text-left
+    text-align left
+  .text-center
+    text-align center
+  .text-right
+    text-align right
+  .text-justify
+    text-align justify
+  .text-wrap
+    word-wrap break-word
+    word-break normal
+  .text-nowrap
+    white-space nowrap
+  .text-break
+    word-break break-all
+  .text-ellipsis
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+    word-break break-all
+  // 其它设置
+  .outline-none
+    outline none
+  .user-select-none
+    user-select none
+  .overflow-hidden
+    overflow hidden
+  .pointer
+    cursor pointer
+  // 边框
+  .border-none
+    border none
+  // 字体大小
+  .size-12
+    font-size size(12)
+  .size-13
+    font-size size(13)
+  .size-14
+    font-size size(14)
+  .size-16
+    font-size size(16)
+  .size-18
+    font-size size(18)
+  .size-20
+    font-size size(20)
+  .size-25
+    font-size size(25)
+  .size-30
+    font-size size(30)
+  .weight-bold
+    font-weight bold
+  .weight-bolder
+    font-weight bolder
+  // 字体颜色
+  .color-white
+    color white
+  .color-brand
+    color $brand-color
+  .color-success
+    color $success-color
+  .color-primary
+    color $primary-color
+  .color-warning
+    color $warning-color
+  .color-error
+    color $error-color
+  .color-info
+    color $info-color
+  // 背景色
+  .bgcolor-brand
+    background-color $brand-color
+  .bgcolor-success
+    background-color $success-color
+  .bgcolor-warning
+    background-color $warning-color
+  .bgcolor-error
+    background-color $error-color
+  .bgcolor-info
+    background-color $info-color
+  .bgcolor-white
+    background-color white
+  // 标签类型
+  .block
+    display block
+  .inline
+    display inline
+  .inline-block
+    display inline-block
+  // 定位
+  .relative
+    position relative
+  .fixed
+    position fixed
+  .absolute
+    position absolute
+  .top-0
+    top 0
+  .right-0
+    left 0
+  .bottom-0
+    top 0
+  .left-0
+    left 0
+  // action
+  .hover-color-primary:hover
+    color $primary-color !important
+  .hover-bgcolor-white
+    $hover-action()
+  .hover-bgcolor-white:hover
+    background-color $hover-bgcolor-white!important
+  .hover-bgcolor-black
+    $hover-action()
+  .hover-bgcolor-black:hover
+    background-color $hover-bgcolor-black!important
+  .hover-bgcolor-base
+    $hover-action()
+  .hover-bgcolor-base:hover
+    background-color $hover-bgcolor!important
+  .active-color-primary:active
+    color $primary-color !important
+  .active-bgcolor-white
+    $hover-action()
+  .active-bgcolor-white:active
+    background-color $hover-bgcolor-white!important
+  .active-bgcolor-black
+    $hover-action()
+  .active-bgcolor-black:active
+    background-color $hover-bgcolor-black!important
+  .active-bgcolor-base
+    $hover-action()
+  .active-bgcolor-base:active
+    background-color $hover-bgcolor!important
+  // list
+  .list-inline
+    padding-left 0
+    margin-bottom 0
+    list-style none
+    &>li
+      display inline-block
+      padding 0 10px 10px 0
+      &:last-of-type
+        padding-right 0
+    
