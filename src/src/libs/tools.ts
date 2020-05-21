@@ -94,7 +94,7 @@ function getParentsOffsetTop(
   return distance + getParentsOffsetTop(parentEle as HTMLElement, parentsEle);
 }
 function delayExecute(delayTime = 0) {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve();
     }, delayTime);

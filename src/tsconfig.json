@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
 
     /* Basic Options */
     // "incremental": true,                   /* Enable incremental compilation */
@@ -29,6 +28,27 @@
     // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
 
+    /* Type declaration files to be included in compilation. */
+    "allowSyntheticDefaultImports": true,
+    /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,
+    /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
+    // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */
+
+    /* Source Map Options */
+    // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    /* Enables experimental support for ES7 decorators. */
+    // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
+    "skipLibCheck": true, // 对库定义文件跳过类型检查(这里防止当前ts版本大于依赖里面的ts版本而报错，如：g2)
+    /* Advanced Options */
+    // "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
     /* Strict Type-Checking Options */
     "strict": true,
     /* Enable all strict type-checking options. */
@@ -52,64 +72,19 @@
     /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     "baseUrl": ".",
     /* Base directory to resolve non-absolute module names. */
-    "types": [
-      "webpack-env",
-      "jest"
-    ],
+    "types": ["webpack-env", "jest"],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@api/*": [
-        "./src/api/*"
-      ],
-      "@assets/*": [
-        "./src/assets/*"
-      ],
-      "@libs/*": [
-        "./src/libs/*"
-      ],
-      "@stores/*": [
-        "./src/stores/*"
-      ],
-      "@business/*": [
-        "./src/components/business-components/*"
-      ],
-      "@basic/*": [
-        "./src/components/basic-components/*"
-      ],
-      "@views/*": [
-        "./src/views/*"
-      ]
+      "@/*": ["src/*"],
+      "@api/*": ["src/api/*"],
+      "@assets/*": ["src/assets/*"],
+      "@libs/*": ["src/libs/*"],
+      "@stores/*": ["src/stores/*"],
+      "@business/*": ["src/components/business-components/*"],
+      "@basic/*": ["src/components/basic-components/*"],
+      "@views/*": ["src/views/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  /* Type declaration files to be included in compilation. */
-  "allowSyntheticDefaultImports": true,
-  /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-  "esModuleInterop": true,
-  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
-  // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
-  // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */
-
-  /* Source Map Options */
-  // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */
-  // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */
-  // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
-  // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
-
-  /* Experimental Options */
-  "experimentalDecorators": true,
-  /* Enables experimental support for ES7 decorators. */
-  // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
-  "skipLibCheck": true, // 对库定义文件跳过类型检查(这里防止当前ts版本大于依赖里面的ts版本而报错，如：g2)
-  /* Advanced Options */
-  // "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
@@ -117,7 +92,5 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

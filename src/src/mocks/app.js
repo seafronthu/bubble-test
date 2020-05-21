@@ -1,4 +1,4 @@
-import Mock from "mockjs";
+// import Mock from "mockjs";
 const list = [
   {
     parentId: 0,
@@ -71,7 +71,7 @@ const list = [
     title: "消息中心"
   }
 ];
-export function getRoute(options) {
+export function getRoute() {
   // let item = {
   //   // "parentId|0-6": 0,
   //   description: "@cparagraph(1, 2)",
@@ -151,7 +151,7 @@ export function getRoute(options) {
   return [
     /\/getRoute$/,
     "get",
-    function(options) {
+    function() {
       return {
         code: 1000,
         message: "success",

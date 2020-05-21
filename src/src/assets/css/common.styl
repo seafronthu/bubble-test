@@ -1,8 +1,7 @@
 $hover-action(t = 0.3s)
-  transition "all %s" % t
+  transition 'all %s' % t
   // 提高权值，防止样式不生效
 body
-// 布局
   .flex-row-start
     display-flex row flex-start flex-start
   .flex-row-start-center
@@ -253,29 +252,29 @@ body
   .hover-bgcolor-white
     $hover-action()
   .hover-bgcolor-white:hover
-    background-color $hover-bgcolor-white!important
+    background-color $hover-bgcolor-white !important
   .hover-bgcolor-black
     $hover-action()
   .hover-bgcolor-black:hover
-    background-color $hover-bgcolor-black!important
+    background-color $hover-bgcolor-black !important
   .hover-bgcolor-base
     $hover-action()
   .hover-bgcolor-base:hover
-    background-color $hover-bgcolor!important
+    background-color $hover-bgcolor !important
   .active-color-primary:active
     color $primary-color !important
   .active-bgcolor-white
     $hover-action()
   .active-bgcolor-white:active
-    background-color $hover-bgcolor-white!important
+    background-color $hover-bgcolor-white !important
   .active-bgcolor-black
     $hover-action()
   .active-bgcolor-black:active
-    background-color $hover-bgcolor-black!important
+    background-color $hover-bgcolor-black !important
   .active-bgcolor-base
     $hover-action()
   .active-bgcolor-base:active
-    background-color $hover-bgcolor!important
+    background-color $hover-bgcolor !important
   // list
   .list-inline
     padding-left 0
@@ -286,4 +285,3 @@ body
       padding 0 10px 10px 0
       &:last-of-type
         padding-right 0
-    

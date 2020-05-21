@@ -56,7 +56,7 @@ export default class FullScreen extends Vue {
       document.documentElement.requestFullscreen();
     }
   }
-  handleFullscreenchange(event: Event) {
+  handleFullscreenchange() {
     this.isFull = isDocumentInFullScreenMode();
   }
   /**lifecle */

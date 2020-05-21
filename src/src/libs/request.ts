@@ -241,8 +241,8 @@ class HttpRequest {
       method,
       baseURL,
       responseType,
-      timeout,
-      notLogin
+      timeout
+      // notLogin
     } = options;
     // if (!notLogin && )
     // if (!notLogin && !userModule.token) {

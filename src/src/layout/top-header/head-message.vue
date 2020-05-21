@@ -188,7 +188,7 @@ export default class HeadMessage extends Vue {
   list = list;
   types = [1, 2, 3];
   /** methods */
-  handleChange(visible: boolean) {
+  handleChange() {
     // console.log("visible:", visible);
   }
   handleWatchMore(type: string) {

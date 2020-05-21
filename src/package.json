@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@antv/g2": "^3.5.16",
+    "@antv/g2": "^4.0.8",
     "ant-design-vue": "^1.6.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
@@ -26,7 +26,11 @@
     "vuex-module-decorators": "^0.17.0"
   },
   "devDependencies": {
+    "@types/enquire.js": "^2.1.2",
     "@types/jest": "^24.0.19",
+    "@types/js-cookie": "^2.2.6",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.3",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "@vue/cli-plugin-babel": "~4.3.0",
@@ -39,6 +43,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "1.0.0-beta.31",
+    "compression-webpack-plugin": "^4.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",

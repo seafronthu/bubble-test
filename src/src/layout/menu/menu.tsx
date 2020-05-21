@@ -52,7 +52,7 @@ export default class Menu extends Vue {
     this.openKeys = val ? [] : this.oldOpenKeys;
   }
   @Watch("$route")
-  watchRoute(to: RouteGlobal.RouteINF, from: RouteGlobal.RouteINF) {
+  watchRoute() {
     const { meta, name } = this.$route;
     this.changeMenu({
       meta,
@@ -81,15 +81,16 @@ export default class Menu extends Vue {
     this.selectedKeys = [key];
     this.$routerPush({ name: key });
   }
-  handleSelected({
-    item,
-    key,
-    keyPath
-  }: {
-    item: string;
-    key: string;
-    keyPath: string;
-  }) {
+  handleSelected() //   {
+  //   item,
+  //   key,
+  //   keyPath
+  // }: {
+  //   item: string;
+  //   key: string;
+  //   keyPath: string;
+  // }
+  {
     // console.log("selected", item, key, keyPath);
     // this.$routerPush({ name: key });
   }

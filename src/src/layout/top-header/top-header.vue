@@ -20,7 +20,6 @@ import ErrorStore from "./error-store.vue";
 import FullScreen from "./full-screen.vue";
 import HeadMessage from "./head-message.vue";
 import Logo from "../logo";
-import { RouteGlobal } from "@/types/route";
 import { appModule } from "@stores/index";
 @Component({
   components: {

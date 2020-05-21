@@ -64,7 +64,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { getErrorData } from "@/api/app";
-import * as moment from "moment";
+import moment from "moment";
 import { appModule } from "@stores/index";
 interface FieldsINF {
   id: string;
@@ -161,25 +161,25 @@ export default class ErrorLog extends Vue {
     // console.log((this.visible as any).a.b);
   }
   handleAddAjax() {
-    getErrorData().then((res: any) => {
+    getErrorData().then(() => {
       // console.log(res);
     });
   }
   handleAdd() {
     this.visible = true;
   }
-  handleTableChange(
-    pagination: { current: number; pageSize: number },
-    filters: string[],
-    sorter: { key: string },
-    { currentDataSource }: { currentDataSource: any[] }
-  ) {
-    // console.log(pagination, filters, sorter, currentDataSource);
-  }
+  // handleTableChange(
+  //   pagination: { current: number; pageSize: number },
+  //   filters: string[],
+  //   sorter: { key: string },
+  //   { currentDataSource }: { currentDataSource: any[] }
+  // ) {
+  //   // console.log(pagination, filters, sorter, currentDataSource);
+  // }
   // handleExpanded(expanded: string, record: { user: string; id: string }) {}
-  handleEdit(record: string) {
-    // console.log(record);
-  }
+  // handleEdit(record: string) {
+  //   // console.log(record);
+  // }
 }
 </script>
 <style lang="stylus">

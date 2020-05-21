@@ -6,7 +6,7 @@ import { userModule, appModule } from "@stores/index";
 import { setTitle } from "@libs/utils";
 import getRouteAndAddRoute from "@libs/routeMixin";
 import initials from "./initials";
-let first: boolean = true;
+let first = true;
 function toRouter(to: Route): string {
   const path = to.path;
   const query = to.query;
@@ -57,7 +57,7 @@ router.beforeEach((to: Route, from: Route, next) => {
     first = false;
     // 没有路由就去请求后台
     if (appModule.authRoutesList.length === 0) {
-      getRouteAndAddRoute().then(res => {
+      getRouteAndAddRoute().then(() => {
         const redirect = from.query.redirect
           ? decodeURIComponent(from.query.redirect as string)
           : null;

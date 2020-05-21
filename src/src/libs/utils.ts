@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import config from "@/config";
-import * as moment from "moment";
+import moment from "moment";
 import { isSameObjTool } from "./tools";
 const { cookieTokenName, cookieExpires, title } = config;
 interface MapObjINF {

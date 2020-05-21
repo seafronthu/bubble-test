@@ -3,7 +3,7 @@
 
 // }
 import { Component, Vue, Prop, Provide } from "vue-property-decorator";
-import { Chart, ChartProps } from "@antv/g2";
+import { Chart } from "@antv/g2";
 import {
   clearUndefined,
   chainFunc,
@@ -11,7 +11,7 @@ import {
   CHART_SYMBOL,
   CREATE_VIEW_SYMBOL
 } from "./core";
-// import { ChartCfg } from "@antv/g2/lib/interface";
+import { ChartCfg } from "@antv/g2/lib/interface";
 
 @Component
 export default class MyChart extends Vue {
@@ -96,10 +96,9 @@ export default class MyChart extends Vue {
       this.chart.changeData(data);
       return;
     }
-    const chartCfg: ChartProps = {
+    const chartCfg: ChartCfg = {
       ...this.allAttrs,
-      height: this.allAttrs.height,
-      container: container as HTMLDivElement
+      container: container as HTMLElement
     };
     this.chart = new Chart(chartCfg);
     if (data.length > 0) {
@@ -115,9 +114,8 @@ export default class MyChart extends Vue {
       // 例：area层
       chartOptions[key].forEach((v: GLOBAL.MapINF<any>) => {
         //  当options为数组的时候即代表传入多个参数
-        const currChartFinished = this.chart[key].apply(
-          null,
-          paramsTurnArray(v.options)
+        const currChartFinished = this.chart[key](
+          ...paramsTurnArray(v.options)
         );
         chainFunc(currChartFinished, v);
       });
@@ -125,10 +123,7 @@ export default class MyChart extends Vue {
     // 对每个view的画图
     views.forEach(items => {
       // 创建一个view
-      const currView = this.chart.createView.apply(
-        null,
-        paramsTurnArray(items.options)
-      );
+      const currView = this.chart.createView(...paramsTurnArray(items.options));
       currView.data(items.data);
       // 例：area层
       Object.keys(items).forEach(key => {
@@ -138,10 +133,7 @@ export default class MyChart extends Vue {
         // 例：对area层的数组进行循环
         items[key].forEach((ite: { options: any }) => {
           // 对当前area添加参数
-          const sonView = currView[key].apply(
-            null,
-            paramsTurnArray(ite.options)
-          );
+          const sonView = currView[key](...paramsTurnArray(ite.options));
           // 对当前area添加原型链方法
           chainFunc(sonView, ite);
         });

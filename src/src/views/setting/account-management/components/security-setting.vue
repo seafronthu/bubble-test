@@ -65,7 +65,7 @@ export default class SecuritySetting extends Vue {
     ];
   }
   /** methods */
-  handleModify(action: string) {}
+  handleModify() {}
   /** lifecle */
   created() {
     this.getDataList();

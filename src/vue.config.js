@@ -3,6 +3,7 @@ const { join, resolve } = require("path");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const isProduction = process.env.NODE_ENV === "production";
+console.log(1234242);
 // const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // const zopfli = require('@gfx/zopfli')
 // const BrotliPlugin = require('brotli-webpack-plugin')
@@ -48,7 +49,7 @@ module.exports = {
     const types = ["vue-modules", "vue", "normal-modules", "normal"];
     types.forEach(type =>
       addStyleResource(config.module.rule("stylus").oneOf(type), [
-        "./src/assets/css/global.stylus"
+        "./src/assets/css/global.styl"
         // "./src/assets/css/mixins.less"
       ])
     );

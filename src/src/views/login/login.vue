@@ -97,13 +97,13 @@ export default class Login extends Vue {
     this.loading = true;
     this.$refs["ruleForm"]
       .validate()
-      .then((boo: boolean) => {
-        getRouteAndAddRoute().then(res => {
+      .then(() => {
+        getRouteAndAddRoute().then(() => {
           this.loading = false;
           this.$routerPush({ name: "Home" });
         });
       })
-      .catch((boo: boolean) => {
+      .catch(() => {
         this.loading = false;
       });
     // this.$routerPush({ name: "Home" });

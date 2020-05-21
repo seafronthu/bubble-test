@@ -92,7 +92,8 @@ export function chainFunc(target: any, obj: GLOBAL.MapINF<any>) {
     if (key === "options") {
       continue;
     }
-    target[key].apply(null, paramsTurnArray(obj[key]));
+    // eslint-disable-next-line prefer-spread
+    target[key](...paramsTurnArray(obj[key]));
   }
 }
 function _possibleConstructorReturn(self: any, call: any) {

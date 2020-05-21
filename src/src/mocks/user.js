@@ -1,4 +1,4 @@
-import Mock from "mockjs";
+// import Mock from "mockjs";
 const data = {
   headimg:
     "http://thirdwx.qlogo.cn/mmopen/vi_32/WYGqMRaib1ulm9iaWicjB2RS4h26Wibia4RdNItiaoicCNKQabOib57IXHsnn1wLbSH5HJ2XG1O8B7EjGZQg8NCBnCyDQQ/132",
@@ -9,7 +9,7 @@ export function getUserInfo() {
   return [
     /\/getUserInfo.*/,
     "get",
-    function(options) {
+    function() {
       return {
         code: 1000,
         message: "success",
@@ -22,7 +22,7 @@ export function login() {
   return [
     /\/login$/,
     "post",
-    function(options) {
+    function() {
       // console.log(option);
       return {
         code: 1000,

@@ -47,7 +47,7 @@ export default class IconFont extends Vue {
     };
   }
   get useParams() {
-    const { spin, type } = this;
+    const { type } = this;
     return {
       attrs: {
         "xlink:href": `#hhf-icon-${type}`

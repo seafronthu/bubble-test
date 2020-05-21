@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop, Model, Inject } from "vue-property-decorator";
+import { Component, Vue, Model } from "vue-property-decorator";
 import BreadCrumb from "../bread-crumb";
 @Component({
   components: {

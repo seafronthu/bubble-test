@@ -30,7 +30,7 @@ function backFrontRoutesConcat(options: {
   const objRoute: {
     [key: number]: RouteGlobal.BackAuthObjINF[];
   } = arrageArrToObj(backstageRoutes); // 以parentId为键名的JSON对象
-  backstageRoutes.forEach((items, index) => {
+  backstageRoutes.forEach(items => {
     if (
       items.type === "MENU" ||
       items.type === "PAGE" ||
@@ -73,7 +73,7 @@ function backFrontRoutesConcat(options: {
           const childRoute = childRouteArr[cur];
           const type = childRoute.type;
           const name = childRoute.component;
-          const id = childRoute.id;
+          // const id = childRoute.id;
           if (type === "TAB" || type === "BUTTON" || type === "MODE") {
             const tab = routeObj.meta[type];
             if (judgementTypeTool(tab, "object")) {
@@ -111,7 +111,7 @@ function arrageAfterRoutesConcat(options: {
   frontstageRoutes: { [key: string]: RouteGlobal.FrontStageRoutesObjINF };
   parentId: number;
 }): RouteGlobal.ArrageAuthRoutesINF[] {
-  const { backstageRoutes, frontstageRoutes, parentId = 0 } = options;
+  const { backstageRoutes, frontstageRoutes } = options;
   const routeConcatArr = backFrontRoutesConcat({
     backstageRoutes,
     frontstageRoutes

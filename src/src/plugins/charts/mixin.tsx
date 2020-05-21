@@ -3,12 +3,10 @@ import { Component, Vue, Prop, Inject } from "vue-property-decorator";
 import {
   clearUndefined,
   getChartComponentTag,
-  viewComponents,
   OptionsINF,
   CHART_SYMBOL,
   CREATE_VIEW_SYMBOL
 } from "./core";
-import { ObjINF } from "@/types";
 @Component
 export default class Mixin extends Vue {
   /** data **/
@@ -45,7 +43,7 @@ export default class Mixin extends Vue {
       //   }]
       // }
       // axis // 会出现多次 所以用数组标识
-      let viewOptionsCurrObj: GLOBAL.MapINF<any> = {
+      const viewOptionsCurrObj: GLOBAL.MapINF<any> = {
         options: this.value
       };
       attrs.forEach(key => {
@@ -57,7 +55,7 @@ export default class Mixin extends Vue {
         this.viewOptions[currentComponentTagName] = [viewOptionsCurrObj];
       }
     } else if (parentComponentTagName === "chart") {
-      let chartOptionsCurrObj: GLOBAL.MapINF<any> = {
+      const chartOptionsCurrObj: GLOBAL.MapINF<any> = {
         options: this.value
       };
       attrs.forEach(key => {

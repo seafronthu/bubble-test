@@ -1,5 +1,5 @@
 import { Vue, Prop, Component, Watch } from "vue-property-decorator";
-import { VNode, CreateElement } from "vue/types/umd";
+import { VNode } from "vue/types/umd";
 import { formatNumber } from "@libs/tools";
 type AnimateType = "ease-out" | "linear" | "ease-in"; // | "ease" | "linear" | "ease-in-out" | "ease-in";
 @Component
@@ -153,13 +153,13 @@ export default class AnimateNumber extends Vue {
     return start + remainVal * (currentTime / count);
   }
   @Watch("startNum")
-  watchStartNum(currVal: number, oldVal: number) {
+  watchStartNum() {
     if (this.autoplay) {
       this.startInit();
     }
   }
   @Watch("endNum")
-  watchEndNum(currVal: number, oldVal: number) {
+  watchEndNum() {
     if (this.autoplay) {
       this.startInit();
     }
@@ -170,7 +170,7 @@ export default class AnimateNumber extends Vue {
     }
   }
   mounted() {}
-  render(h: CreateElement): VNode {
+  render(): VNode {
     const prefix = this.$scopedSlots["prefix"];
     const suffix = this.$scopedSlots["suffix"];
 
