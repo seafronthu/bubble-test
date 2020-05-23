@@ -70,18 +70,18 @@
     /* Module Resolution Options */
     "moduleResolution": "node",
     /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
-    "baseUrl": "..",
+    "baseUrl": ".",
     /* Base directory to resolve non-absolute module names. */
     "types": ["webpack-env", "jest"],
     "paths": {
-      "@/*": ["./src/src/*"],
-      "@api/*": ["./src/src/api/*"],
-      "@assets/*": ["./src/src/assets/*"],
-      "@libs/*": ["./src/src/libs/*"],
-      "@stores/*": ["./src/src/stores/*"],
-      "@business/*": ["./src/src/components/business-components/*"],
-      "@basic/*": ["./src/src/components/basic-components/*"],
-      "@views/*": ["./src/src/views/*"]
+      "@/*": ["./src/*"],
+      "@api/*": ["./src/api/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@libs/*": ["./src/libs/*"],
+      "@stores/*": ["./src/stores/*"],
+      "@business/*": ["./src/components/business-components/*"],
+      "@basic/*": ["./src/components/basic-components/*"],
+      "@views/*": ["./src/views/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },

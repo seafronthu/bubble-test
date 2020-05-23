@@ -116,8 +116,11 @@ async function errorCaptured(
     return [err, null];
   }
 }
-// 获取随机颜色
-function getRandomColor(
+/**
+ * 获取随机颜色
+ * @param { red?: number; green?: number;  blue?: number; opacity?: number; } options
+ */
+function randomColor(
   options: {
     red?: number;
     green?: number;
@@ -357,7 +360,7 @@ export {
   getParentsOffsetTop,
   errorCaptured,
   delayExecute,
-  getRandomColor,
+  randomColor,
   urlJoin,
   formatNumber,
   isEmpty

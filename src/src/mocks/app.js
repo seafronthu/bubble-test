@@ -69,6 +69,46 @@ const list = [
     path: "message-center",
     icon: "",
     title: "消息中心"
+  },
+  {
+    parentId: 0,
+    id: 8,
+    description: "@cparagraph(1, 2)",
+    type: "MENU",
+    component: "Project",
+    path: "project",
+    icon: "project",
+    title: "项目"
+  },
+  {
+    parentId: 8,
+    id: 9,
+    description: "@cparagraph(1, 2)",
+    type: "PAGE",
+    component: "ProjectList",
+    path: "project-list",
+    icon: "",
+    title: "项目列表"
+  },
+  {
+    parentId: 0,
+    id: 10,
+    description: "@cparagraph(1, 2)",
+    type: "MENU",
+    component: "Image",
+    path: "image",
+    icon: "gold",
+    title: "镜像"
+  },
+  {
+    parentId: 10,
+    id: 11,
+    description: "@cparagraph(1, 2)",
+    type: "PAGE",
+    component: "ImageList",
+    path: "image-list",
+    icon: "",
+    title: "镜像列表"
   }
 ];
 export function getRoute() {

@@ -46,7 +46,7 @@ export default class ContainerFluid extends Vue {
   })
   overflowY!: boolean;
   @Prop({
-    type: Boolean
+    type: String
   })
   scrollBackgroundColor?: string;
   height = "calc(100vh - 152px)";
